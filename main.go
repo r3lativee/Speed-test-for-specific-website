@@ -29,11 +29,11 @@ func main() {
     }
     defer response.Body.Close()
 
-    buffer := make([]byte, 32*1024) // 32KB buffer
+    buffer := make([]byte, 32*1024) // 32KB rakha hai buffer size
     var downloaded int64 = 0
     start := time.Now()
 
-    ticker := time.NewTicker(100 * time.Millisecond) // Update every 100ms
+    ticker := time.NewTicker(100 * time.Millisecond) 
 
     previousTime := start
     previousDownloaded := downloaded
@@ -47,7 +47,7 @@ func main() {
                 if elapsed == 0 {
                     elapsed = 0.1 // Avoid division by zero
                 }
-                speed := float64(downloaded-previousDownloaded) / elapsed / (1024 * 1024) // Speed in MB/s
+                speed := float64(downloaded-previousDownloaded) / elapsed / (1024 * 1024) // Show in MB
 
                 printProgress(downloaded, speed)
 
