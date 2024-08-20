@@ -2,7 +2,7 @@
 
 
 
-## Started 
+## Getting Started 
 
 - installing go lang 
 	- `sudo apt install golang-go`
